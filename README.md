@@ -35,7 +35,7 @@ npm install recharts @/components/ui/card tailwindcss
 
 1. Clone the repository:
 ```sh
-git clone https://github.com/yourusername/exam-ease.git
+git clone https://github.com/NishantKumar-CSE/Ease_Exam_DevQuest.git
 ```
 
 2. Navigate to the project directory:
