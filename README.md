@@ -1,71 +1,185 @@
 # ExamEase Quiz Component
 
 ![ExamEase Screenshot](./images/exam_console.png)
-ExamEase is a React-based quiz component designed to test technical knowledge through an interactive and engaging interface. This component includes features such as a timer for each question, instant feedback, and detailed performance analysis.
+# ExamEase Quiz Application
 
-## Early Access
-- Link (CLICK HERE): https://claude.site/artifacts/78307c5a-e7b6-4b47-8cb6-9f9a43441f65
+A modern, interactive quiz application built with React that tests technical knowledge across various programming and web development topics. The application features real-time feedback, detailed explanations, and comprehensive performance analytics.
 
-## Features
-![ExamEase Screenshot](./images/packet.png)
+## 🌟 Features
 
+- 15 technical questions across multiple categories
+- Real-time countdown timer for each question
+- Instant feedback and detailed explanations
+- Interactive category-based performance tracking
+- Visual analytics with pie charts
+- Personalized improvement recommendations
+- Responsive design
+- Progress tracking
+- Mobile-friendly interface
 
-- **Interactive Quiz**: Engage users with a series of questions and options.
-- **Timer**: Each question has a time limit to add a challenge.
+## 🚀 Getting Started
 
+### Prerequisites
 
-![ExamEase Screenshot](./images/summary.png)
+- Node.js (v14 or higher)
+- npm or yarn
+- React (v17 or higher)
 
+### Required Dependencies
 
--**Instant Feedback**: Immediate feedback on whether the selected answer is correct or incorrect.
-- **Performance Analysis**: Detailed analysis of performance by category.
-- **Responsive Design**: Adapts to different screen sizes for a seamless user experience.
-
-## Installation
-
-To use the ExamEase component in your project, follow these steps:
-
-1. **Clone the Repository**:
-   ```bash
-   git clone <repository-url>
-   cd exam-ease
-   ```
-2. **Install Dependencies**:
-   ```bash
-   npm install
-   ```
-3. **Run the Application**:
-   ```bash
-   npm start
-   ```
-
-## Usage
-
-Import the ExamEase component into your application and use it as follows:
-
-```javascript
-import React from 'react';
-import ReactDOM from 'react-dom';
-import ExamEase from './ExamEase';
-
-ReactDOM.render(<ExamEase />, document.getElementById('root'));
+```bash
+npm install recharts @/components/ui/card tailwindcss
 ```
 
-## Component Structure
+### Installation
 
-- **Quiz Data**: An array of objects containing questions, options, correct answers, time limits, and categories.
-- **State Management**: Uses React's `useState` and `useEffect` hooks to manage the quiz state, including the current question, score, selected answer, time left, and more.
-- **Styling**: Utilizes Tailwind CSS for styling and responsive design.
+### Installation
 
-## Customization
+1. Clone the repository:
+```bash
+git clone https://github.com/NishantKumar-CSE/Ease_Exam_DevQuest.git
+cd Ease_Exam_DevQuest
+```
 
-You can customize the quiz data, styles, and other properties to fit your needs. The quiz data is defined in the `quizData` array, and styles can be modified using Tailwind CSS classes.
+2. Install dependencies:
+```bash
+npm install
+```
 
-## Contributing
+3. Start the development server:
+```bash
+npm run dev
+```
 
-Contributions are welcome! Please open an issue or submit a pull request.
+## 📚 Quiz Structure
 
-## License
+The quiz consists of questions from the following categories:
+- Web Development
+- Web Security
+- Development Tools
+- Data Structures
+- Algorithms
+- Web Infrastructure
+- Databases
 
-This project is licensed under the MIT License.
+Each question includes:
+- Multiple choice options
+- Time limit
+- Detailed explanation
+- Category classification
 
+## 🎨 UI Components
+
+1. **ProgressBar**
+   - Shows quiz completion progress
+   - Customizable color scheme
+
+2. **Question Display**
+   - Category indicator
+   - Question counter
+   - Timer display
+
+3. **Results Dashboard**
+   - Overall score
+   - Category-wise performance pie chart
+   - Detailed analysis
+   - Improvement recommendations
+
+## 🛠️ Technical Implementation
+
+### Key Features Implementation
+
+1. **Timer System**
+```javascript
+useEffect(() => {
+  if (timeLeft > 0 && !answered) {
+    const timer = setInterval(() => {
+      setTimeLeft((prev) => prev - 1);
+    }, 1000);
+    return () => clearInterval(timer);
+  }
+}, [timeLeft, answered]);
+```
+
+2. **Score Tracking**
+```javascript
+const handleAnswerSubmit = (selectedIndex) => {
+  if (!answered) {
+    const correct = selectedIndex === quizData[currentQuestion].correct;
+    if (correct) {
+      setScore(score + 1);
+      // Update category scores
+      setCategoryScores(prev => ({
+        ...prev,
+        [currentCategory]: (prev[currentCategory] || 0) + 1
+      }));
+    }
+  }
+};
+```
+
+## 📊 Analytics Features
+
+The application provides:
+- Overall score percentage
+- Category-wise performance breakdown
+- Visual representation through pie charts
+- Personalized recommendations based on performance
+
+## 🎯 Performance Analysis
+
+The system analyzes performance in three tiers:
+1. **Excellent** (>75% correct)
+2. **Good** (50-75% correct)
+3. **Needs Improvement** (<50% correct)
+
+## 🔧 Customization
+
+### Adding New Questions
+
+Add new questions to the `quizData` array following this format:
+```javascript
+{
+  question: "Your question here?",
+  options: ["Option 1", "Option 2", "Option 3", "Option 4"],
+  correct: 0, // Index of correct answer
+  timeLimit: 30, // Time in seconds
+  category: "Category Name"
+}
+```
+
+### Modifying Styles
+
+The application uses Tailwind CSS for styling. Customize the appearance by:
+1. Modifying the existing Tailwind classes
+2. Adding new styles in your CSS file
+3. Adjusting the color schemes in the component
+
+## 📱 Responsive Design
+
+The application is fully responsive and works across:
+- Desktop browsers
+- Tablets
+- Mobile devices
+
+## 🤝 Contributing
+
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+## 📝 License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+## 👥 Authors
+
+- Your Name - Initial work
+
+## 🙏 Acknowledgments
+
+- React team for the amazing framework
+- Recharts for the charting library
+- Tailwind CSS for the styling utility classes
