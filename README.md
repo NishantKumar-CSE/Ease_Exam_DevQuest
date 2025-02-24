@@ -31,23 +31,30 @@ A modern, interactive quiz application built with React that tests technical kno
 npm install recharts @/components/ui/card tailwindcss
 ```
 
-### Installation
-
-### Installation
+## Installation
 
 1. Clone the repository:
-```bash
-git clone https://github.com/NishantKumar-CSE/Ease_Exam_DevQuest.git
-cd Ease_Exam_DevQuest
+```sh
+git clone https://github.com/yourusername/exam-ease.git
 ```
 
-2. Install dependencies:
-```bash
+2. Navigate to the project directory:
+```sh
+cd my-quiz-app
+```
+
+3. Install dependencies:
+```sh
 npm install
 ```
 
-3. Start the development server:
-```bash
+4. Install required shadcn/ui components:
+```sh
+npx shadcn-ui add card progress
+```
+
+5. Start the development server:
+```sh
 npm run dev
 ```
 
