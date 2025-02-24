@@ -7,15 +7,14 @@ A modern, interactive quiz application built with React that tests technical kno
 
 ## 🌟 Features
 
-- 15 technical questions across multiple categories
-- Real-time countdown timer for each question
-- Instant feedback and detailed explanations
-- Interactive category-based performance tracking
-- Visual analytics with pie charts
-- Personalized improvement recommendations
-- Responsive design
-- Progress tracking
-- Mobile-friendly interface
+- 📝 Multiple choice questions with timed responses
+- ⏰ Automatic progression when time runs out
+- ✨ Instant feedback and explanations
+- 📊 Detailed performance analysis with category breakdown
+- 📈 Visual statistics with pie charts
+- 🎯 Category-wise performance tracking
+- 🔄 Option to retake the quiz
+- 💡 Comprehensive feedback system
 
 ## 🚀 Getting Started
 
@@ -48,12 +47,7 @@ cd my-quiz-app
 npm install
 ```
 
-4. Install required shadcn/ui components:
-```sh
-npx shadcn-ui add card progress
-```
-
-5. Start the development server:
+4. Start the development server:
 ```sh
 npm run dev
 ```
@@ -126,6 +120,7 @@ const handleAnswerSubmit = (selectedIndex) => {
 ```
 
 ## 📊 Analytics Features
+![ExamEase Screenshot](./images/react.png)
 
 The application provides:
 - Overall score percentage
@@ -133,12 +128,32 @@ The application provides:
 - Visual representation through pie charts
 - Personalized recommendations based on performance
 
-## 🎯 Performance Analysis
+## Feedback
 
-The system analyzes performance in three tiers:
-1. **Excellent** (>75% correct)
-2. **Good** (50-75% correct)
-3. **Needs Improvement** (<50% correct)
+![ExamEase Screenshot](./images/sss.png)
+The application provides comprehensive feedback at multiple levels:
+
+1. **Immediate Question Feedback**
+   - Correct/incorrect answer indication
+   - Detailed explanation for each question
+   - Visual cues with color-coded responses
+
+2. **Category Performance**
+   - Interactive pie chart showing performance by topic
+   - Percentage scores for each category
+   - Visual representation of strong and weak areas
+
+3. **Overall Performance Analysis**
+   - Total score and percentage
+   - Category-wise breakdown
+   - Personalized recommendations for improvement
+   - Status indicators (Needs Improvement, Good, Excellent)
+   - Specific learning suggestions for each category
+
+4. **Progress Tracking**
+   - Visual progress bar during the quiz
+   - Time management feedback
+   - Question-by-question performance tracking
 
 ## 🔧 Customization
 
@@ -155,20 +170,6 @@ Add new questions to the `quizData` array following this format:
 }
 ```
 
-### Modifying Styles
-
-The application uses Tailwind CSS for styling. Customize the appearance by:
-1. Modifying the existing Tailwind classes
-2. Adding new styles in your CSS file
-3. Adjusting the color schemes in the component
-
-## 📱 Responsive Design
-
-The application is fully responsive and works across:
-- Desktop browsers
-- Tablets
-- Mobile devices
-
 ## 🤝 Contributing
 
 1. Fork the repository
@@ -182,8 +183,8 @@ The application is fully responsive and works across:
 This project is licensed under the MIT License - see the LICENSE file for details.
 
 ## 👥 Authors
-
-- Your Name - Initial work
+**Nishant Kumar**  
+GitHub: [NishantKumar-CSE](https://github.com/NishantKumar-CSE)
 
 ## 🙏 Acknowledgments
 
