@@ -1,6 +1,6 @@
 # ExamEase Quiz Component
 
-![ExamEase Screenshot](./images/exam_console.png)
+![ExamEase Screenshot](./images/react.png)
 
 
 # ExamEase Quiz Application
