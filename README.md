@@ -1,6 +1,8 @@
 # ExamEase Quiz Component
 
 ![ExamEase Screenshot](./images/exam_console.png)
+
+
 # ExamEase Quiz Application
 
 A modern, interactive quiz application built with React that tests technical knowledge across various programming and web development topics. The application features real-time feedback, detailed explanations, and comprehensive performance analytics.
@@ -86,6 +88,45 @@ Each question includes:
    - Detailed analysis
    - Improvement recommendations
 
+## 📊 Analytics Features
+![ExamEase Screenshot](./images/Analysis.png)
+
+The application provides:
+- Overall score percentage
+- Category-wise performance breakdown
+- Visual representation through pie charts
+- Personalized recommendations based on performance
+
+## Feedback
+
+![ExamEase Screenshot](./images/feedback.png)
+
+
+The application provides comprehensive feedback at multiple levels:
+
+1. **Immediate Question Feedback**
+   - Correct/incorrect answer indication
+   - Detailed explanation for each question
+   - Visual cues with color-coded responses
+
+2. **Category Performance**
+   - Interactive pie chart showing performance by topic
+   - Percentage scores for each category
+   - Visual representation of strong and weak areas
+
+3. **Overall Performance Analysis**
+   - Total score and percentage
+   - Category-wise breakdown
+   - Personalized recommendations for improvement
+   - Status indicators (Needs Improvement, Good, Excellent)
+   - Specific learning suggestions for each category
+
+4. **Progress Tracking**
+   - Visual progress bar during the quiz
+   - Time management feedback
+   - Question-by-question performance tracking
+
+
 ## 🛠️ Technical Implementation
 
 ### Key Features Implementation
@@ -118,42 +159,6 @@ const handleAnswerSubmit = (selectedIndex) => {
   }
 };
 ```
-
-## 📊 Analytics Features
-![ExamEase Screenshot](./images/react.png)
-
-The application provides:
-- Overall score percentage
-- Category-wise performance breakdown
-- Visual representation through pie charts
-- Personalized recommendations based on performance
-
-## Feedback
-
-![ExamEase Screenshot](./images/sss.png)
-The application provides comprehensive feedback at multiple levels:
-
-1. **Immediate Question Feedback**
-   - Correct/incorrect answer indication
-   - Detailed explanation for each question
-   - Visual cues with color-coded responses
-
-2. **Category Performance**
-   - Interactive pie chart showing performance by topic
-   - Percentage scores for each category
-   - Visual representation of strong and weak areas
-
-3. **Overall Performance Analysis**
-   - Total score and percentage
-   - Category-wise breakdown
-   - Personalized recommendations for improvement
-   - Status indicators (Needs Improvement, Good, Excellent)
-   - Specific learning suggestions for each category
-
-4. **Progress Tracking**
-   - Visual progress bar during the quiz
-   - Time management feedback
-   - Question-by-question performance tracking
 
 ## 🔧 Customization
 
